@@ -95,21 +95,21 @@ const AthleteProfiles = () => {
   );
 
   return (
-    <div className="space-y-8">
-      <h2 className="text-4xl font-bold text-center mb-8 text-primary dark:text-light">
+    <div className="p-6 bg-gray-100 dark:bg-gray-900 min-h-screen rounded-lg">
+      <h2 className="text-4xl font-bold text-center mb-8 text-black dark:text-white">
         Athlete Profiles
       </h2>
 
-      <div className="max-w-md mx-auto mb-8">
+      <div className="max-w-lg mx-auto mb-8">
         <div className="relative">
           <input
             type="text"
             placeholder="Search athletes..."
-            className="w-full p-2 pl-10 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary dark:bg-dark dark:text-light"
+            className="w-full p-3 pl-12 border border-gray-300 rounded-full bg-white text-gray-900 dark:bg-gray-800 dark:text-light dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+          <FaSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 dark:text-gray-400" />
         </div>
       </div>
 
@@ -117,24 +117,24 @@ const AthleteProfiles = () => {
         {filteredAthletes.map((athlete, index) => (
           <div
             key={index}
-            className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition duration-300"
+            className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105"
           >
             <img
               src={athlete.image}
               alt={athlete.name}
-              className="w-full h-64 object-cover"
+              className="w-full h-48 object-cover"
             />
-            <div className="p-6">
-              <h3 className="text-2xl font-semibold mb-2 text-primary dark:text-light">
+            <div className="p-4">
+              <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
                 {athlete.name}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-700 dark:text-gray-300">
                 {athlete.sport}
               </p>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-700 dark:text-gray-300">
                 {athlete.country}
               </p>
-              <p className="mt-2 text-secondary font-semibold">
+              <p className="mt-2 text-secondary font-semibold text-gray-700 dark:text-gray-300">
                 Medals: {athlete.medals}
               </p>
             </div>

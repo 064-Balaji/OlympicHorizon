@@ -28,29 +28,41 @@ const Home = () => {
       {/* Olympic Overview Section */}
       <section className="container mx-auto px-4">
         <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
-          <h2 className="text-3xl font-bold mb-6 text-center">
+          <h2 className="text-3xl font-bold mb-6 text-center text-black dark:text-white">
             Paris 2024 Summer Olympics
           </h2>
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-8">
             <div className="flex items-center">
-              <FaCalendarAlt className="text-2xl text-blue-600 mr-3" />
+              <FaCalendarAlt className="text-2xl text-blue-600 dark:text-blue-400 mr-3" />
               <div>
-                <h3 className="font-semibold">Date</h3>
-                <p>July 26 - August 11, 2024</p>
+                <h3 className="font-semibold text-black dark:text-white">
+                  Date
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  July 26 - August 11, 2024
+                </p>
               </div>
             </div>
             <div className="flex items-center">
-              <FaMapMarkerAlt className="text-2xl text-blue-600 mr-3" />
+              <FaMapMarkerAlt className="text-2xl text-blue-600 dark:text-blue-400 mr-3" />
               <div>
-                <h3 className="font-semibold">Location</h3>
-                <p>Paris, France</p>
+                <h3 className="font-semibold text-black dark:text-white">
+                  Location
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Paris, France
+                </p>
               </div>
             </div>
             <div className="flex items-center">
-              <FaMedal className="text-2xl text-blue-600 mr-3" />
+              <FaMedal className="text-2xl text-blue-600 dark:text-blue-400 mr-3" />
               <div>
-                <h3 className="font-semibold">Events</h3>
-                <p>329 events in 32 sports</p>
+                <h3 className="font-semibold text-black dark:text-white">
+                  Events
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  329 events in 32 sports
+                </p>
               </div>
             </div>
           </div>
@@ -59,7 +71,7 @@ const Home = () => {
 
       {/* Featured Athletes Section */}
       <section className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">
+        <h2 className="text-3xl font-bold mb-8 text-center text-black dark:text-white">
           Featured Athletes
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -96,7 +108,9 @@ const Home = () => {
                 className="w-full h-64 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{athlete.name}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
+                  {athlete.name}
+                </h3>
                 <p className="text-gray-600 dark:text-gray-300">
                   {athlete.sport}
                 </p>
@@ -119,7 +133,9 @@ const Home = () => {
 
       {/* Featured Events Section */}
       <section className="container mx-auto px-4 mb-12">
-        <h2 className="text-3xl font-bold mb-8 text-center">Upcoming Events</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center text-black dark:text-white">
+          Upcoming Events
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
@@ -137,11 +153,11 @@ const Home = () => {
                 "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.vox-cdn.com%2Fthumbor%2F1J4Pk4H6cbF8ndyg6EZJX4mmKIE%3D%2F0x677%3A2315x2220%2F1310x873%2Fcdn0.vox-cdn.com%2Fuploads%2Fchorus_image%2Fimage%2F50468587%2FGettyImages-592639404.0.jpg&f=1&nofb=1&ipt=87f482709a981a66e67483c08db2d17bd13cf24df0cfe7620d0c47b96dd2a1ab&ipo=images",
             },
             {
-              name: "Women's 200m Final",
-              date: "July 30, 2024",
-              time: "6:30 PM",
+              name: "Women's Gymnastics",
+              date: "August 6, 2024",
+              time: "3:00 PM",
               image:
-                "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.gannett-cdn.com%2Fpresto%2F2021%2F08%2F02%2FUSAT%2Fca2bd30d-962e-4c19-ae92-27c92c2adeb1-USATSI_16319755.jpg%3Fcrop%3D4191%2C2357%2Cx0%2Cy58%26width%3D3200%26height%3D1800%26format%3Dpjpg%26auto%3Dwebp&f=1&nofb=1&ipt=cca389fb9dcf5a44e6bd1595fd4bea55465c199adfafe7c438bac7007f4cd19e&ipo=images",
+                "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.nbclosangeles.com%2F2024%2F07%2FGettyImages-2164457019_99b630.jpg%3Fquality%3D85%26strip%3Dall%26crop%3D0px%252C419px%252C5292px%252C2976px%26resize%3D1200%252C675&f=1&nofb=1&ipt=7484f088806428a06874a2bff20e5ed42e196cd4a30684730bac1544996cc6cf&ipo=images",
             },
           ].map((event, index) => (
             <div
@@ -151,10 +167,12 @@ const Home = () => {
               <img
                 src={event.image}
                 alt={event.name}
-                className="w-full h-48 object-cover"
+                className="w-full h-64 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{event.name}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
+                  {event.name}
+                </h3>
                 <p className="text-gray-600 dark:text-gray-300">{event.date}</p>
                 <p className="text-gray-600 dark:text-gray-300">{event.time}</p>
               </div>
@@ -166,7 +184,7 @@ const Home = () => {
             to="/events"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300"
           >
-            View Full Schedule
+            View All Events
           </Link>
         </div>
       </section>

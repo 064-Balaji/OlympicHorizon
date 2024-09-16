@@ -84,8 +84,8 @@ const Events = () => {
   );
 
   return (
-    <div className="space-y-8">
-      <h2 className="text-4xl font-bold text-center mb-8 text-primary dark:text-light">
+    <div className="space-y-8 p-6 bg-gray-100 dark:bg-gray-900 min-h-screen rounded-lg">
+      <h2 className="text-4xl font-bold text-center mb-8 text-black dark:text-white">
         Events Schedule
       </h2>
 
@@ -94,11 +94,11 @@ const Events = () => {
           <input
             type="text"
             placeholder="Search events..."
-            className="w-full p-2 pl-10 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary dark:bg-dark dark:text-light"
+            className="w-full p-3 pl-12 border border-gray-300 rounded-full bg-white text-gray-900 dark:bg-gray-800 dark:text-light dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+          <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-300" />
         </div>
       </div>
 
@@ -110,11 +110,11 @@ const Events = () => {
           >
             <img
               src={event.image}
-              alt={event.name}
+              alt={`Image of ${event.name}`}
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
-              <h3 className="text-2xl font-semibold mb-2 text-primary dark:text-light">
+              <h3 className="text-2xl font-semibold mb-2 text-black dark:text-white">
                 {event.name}
               </h3>
               <p className="flex items-center text-gray-600 dark:text-gray-300 mb-1">
